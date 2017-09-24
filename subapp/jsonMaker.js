@@ -17,7 +17,7 @@ var noOfRow=arrayOne.length;
 var noOfCol=header.length;
 var jArray=[];
 
-var i=0,j=0;
+var i=0,j=0; 
 for (i = 1; i < noOfRow-1; i++) {
 
     var obj = {};
