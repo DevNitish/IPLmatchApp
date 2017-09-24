@@ -1,0 +1,37 @@
+{
+  "name": "iplapp",
+  "version": "1.0.0",
+  "description": "the ipl app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www"
+  },
+  "author": "Nitish Kumar",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "mongoose": "^4.6.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.2",
+    "static-favicon": "^2.0.0-alpha"
+  },
+   "devDependencies": {
+    "light-server": "^2.0.1",
+     "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "5.0.0"
+  }
+}

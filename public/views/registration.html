@@ -1,0 +1,117 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3"><i class="fa fa-ils" aria-hidden="true"></i>neo ipl</h1>
+    <p class="lead">Home of IPL</p>
+    <hr class="my-4">
+    <a ui-sref="teams"><button class="btn btn-success" role="button"><i class="fa fa-users"></i> Teams</button></a>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class=" row">
+    <div class="col-md-6  ">
+      <div class="alert alert-success">
+        <h3>Sign up</h3>
+      </div>
+      <form ng-submit="saveUser()" name="registration">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" required ng-model="user.name" id="name" aria-describedby="nameHelp" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" required class="form-control" id="exampleInputEmail1" ng-model="user.email" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div ng-if="!user.idurl" class="form-group">
+          <label for="exampleInputEmail1">Upload Profile Picture</label>
+          <br>
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-upload"></i> Upload</button>
+
+        </div>
+        <div ng-if="user.idurl" class="form-group">
+          <img class="card-img-top" ng-if="user.idurl" ng-src="{{user.idurl}}" height="100px" style="max-width: padding-top:2em;100%;margin:auto"
+            alt="Card image cap">
+          <span ng-click="user.idurl=''">
+         <i style=" top: 20; right:10px"class="fa fa-trash" aria-hidden="true"></i>
+         </span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" required ng-model="user.password" id="password" aria-describedby="passwordHelp"
+            placeholder="Pasword">
+        </div>
+        <div class="form-group" ng-class="{'has-error': registration.mobile.$error.number}">
+          <label for="mobilenumber">Mobile</label>
+          <input type="number" required class="form-control" id="mobilenumber" name="mobile" ng-minlength="10" ng-maxlength="10" ng-model="user.mobile"
+            aria-describedby="mobileNumber" placeholder="Enter mobile">
+          <span class="help-block" ng-show="registration.mobile.$error.required || 
+                           registration.mobile.$error.number">
+                          <small> Valid mobile number is required</small>
+            </span>
+          <span class="help-block" ng-show="((registration.mobile.$error.minlength ||
+                           registration.mobile.$error.maxlength) && 
+                           registration.mobile.$dirty) ">
+                           <small> Mobile number should be 10 digits </small>
+            </span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+      <div ng-class="alertClass" role="alert">
+        <strong>{{message}}</strong>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <img src="..\includes\images\ipl 2016.jpg" style="width:auto;height:20em" alt="IPL">
+    </div>
+
+  </div>
+  <!--row-->
+</div>
+<!--container-->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Upload Profile Picture</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form name="myForm">
+          <fieldset>
+            <br>
+            <input type="file" ngf-select ng-model="picFile" name="file" required ngf-model-invalid="errorFile">
+            <i ng-show="myForm.file.$error.required">*required</i>
+            <br>
+
+            <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb">
+            <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+            <br>
+            <button ng-disabled="!myForm.$valid" class="btn btn-success" ng-click="uploadPic(picFile)">Submit</button>
+            <span class="progress" ng-show="picFile.progress >= 0">
+              <div style="width:{{picFile.progress}}+'%'"   ng-bind="picFile.progress + '%'"></div>
+            </span>
+            <span ng-show="picFile.result">Upload Successful</span>
+            <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+          </fieldset>
+          <br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--modal ends-->

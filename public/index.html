@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>neo ipl: Home of IPL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./includes/css/bootstrap.min.css">
+    <!--custom css file-->
+    <link rel="stylesheet" href="./includes/css/style.css">
+    <!--bootstrap css and js file-->
+    <script src="./includes/js/jquery-2.2.4.min.js"></script>
+    </script>
+    <script src="./includes/js/tether.min.js">
+    </script>
+    <script src="./includes/js/bootstrap.min.js">
+    </script>
+    <script src="./includes/js/fe4a02cae5.js"></script>
+
+    <!--Angular js files-->
+    <script src="./includes/js//angular.min.js"></script>
+    <!--file upload-->
+    <script type="text/javascript" src="./includes/js/ng-file-upload/ng-file-upload-shim.js"></script>
+
+    <script type="text/javascript" src="./includes/js/ng-file-upload/ng-file-upload.js"></script>
+
+    <script src="./includes/js//angular-animate.js"></script>
+    <script src="./includes/js//angular-ui-router.js"></script>
+    <script src="./includes/js//script.js"></script>
+
+</head>
+
+<body ng-app="myipl" ng-controller="mainCtrl" ng-cloak>
+    <nav class="navbar navbar-toggleable-md navbar-inverse  bg-inverse">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"> </span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand mb-0" href="#">
+                <img src="./includes/images/ball.png" class="myiplicon" alt="myIPL">
+                <span class="lead">My IPL</span>
+            </a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="teams"><i class="fa fa-users"></i> Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="livescore"><i class="fa fa-trophy"></i> Live Score</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="matches"><i class="fa fa-trophy"></i> Matches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="contact"><i class="fa fa-send-o"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="myipl-nav">
+          <a href="" role="button" class="btn" > <i class="fa fa-tv"></i> Live Score</a>
+    </nav>
+    <!--main body-->
+    <div ui-view></div>
+    <br>
+    <br>
+  <footer id="footer" style="background-color: #333;margin-top:5px ">
+    <div class="container" style="padding-top:15px ">
+      <div class="row">
+        <div class="col-sm-3">
+          <h6>Copyright &copy : neo ipl-2017</h6>
+        </div>
+        <div class="col-sm-3">
+          <h6>Navigation</h6>
+          <ul class="unstyle">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="teams">Teams</a></li>
+            <li><a ui-sref="matches">Matches</a></li>
+            <li><a ui-sref="contact">Contact Us</a></li>
+           
+          </ul>
+        </div>
+        <div class="col-sm-6">
+            <h4>neo IPL</h4>
+        </div>
+      </div>
+      <p class="text-muted text-center">Coded with <i class="fa fa-heart"></i> by <a href="https://twitter.com/authornitish" target="_blank">Nitish Kumar</a></p>
+
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </footer>
+    <!--js files-->
+
+    <!--all custom javascript files here-->
+    <!--<script src="./dist/script.js"></script>-->
+    <!--
+  <script src="./app.public.js"></script>
+  <script src="./app.route.js">  </script>-->
+    <script src="dist/script.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>

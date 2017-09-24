@@ -1,0 +1,12 @@
+//starting point of the node app
+const app=require('../app');
+const server=require('http').createServer(app);
+//const ioConfig=require('../io/io.main.js');
+//ioConfig(server);
+
+var port=process.env.PORT || 4050;
+
+server.listen(port,function(){
+console.log("Seed App is listening on port: ",port);
+});
+

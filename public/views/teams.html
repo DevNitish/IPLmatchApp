@@ -1,0 +1,18 @@
+<div class="container" ng-init="getAllTeam()">
+    <div class="row">
+        <div class="card" ng-repeat="card in allTeam" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+            <img class="card-img-top" ng-click="moreInfo(card)"  height="180px"
+                style="max-width: 100%" ng-src="{{'../'+card.imageurl}}" alt="{{card.title}}">
+            <div class="card-block">
+
+                <h4 class="card-title"  ng-click="moreInfo(card)">{{card.name}}</h4>
+
+                <button role="button" class="btn  btn-outline-success my-2 my-sm-0" ng-click="moreInfo(card)">More Info</button>
+                <a ui role="button" class="btn btn-outline-primary my-2 my-sm-0" ng-click="viewStat(card)" >View Statistics</a>
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>

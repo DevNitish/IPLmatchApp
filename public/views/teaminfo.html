@@ -1,0 +1,37 @@
+<div class="container" ng-init="callallSeason()">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: auto; margin:0.2pc 1.5em 0.2pc 1.5em">
+                <img class="card-img-top" height="180px" style="max-width: 100%" ng-src="{{'../'+teaminfo.imageurl}}" alt="{{card.title}}">
+                <div class="card-block">
+
+                    <h4 class="card-title">{{teaminfo.name}}</h4>
+                </div>
+
+            </div>
+            <div class="list-group">
+                <a href="" ng-click="findMatch(year)" class="list-group-item " ng-repeat="year in allSeason">{{year}}</a>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="alert alert-danger" ng-if="!match.length" role="alert">
+            <strong>Oh snap!</strong> There is no data for year {{year}}.
+            </div>
+            <div class="alert alert-info" ng-if="match.length"role="alert">
+            <strong>Year: {{year}}</strong>
+            </div>
+            <div class="alert alert-success" ng-repeat="m in match" role="alert">
+                <strong>{{m.team1}} VS {{m.team2}}</strong>
+                <br>
+                <b>{{m.winner}}</b> won by
+                <span ng-if="m.win_by_runs!=0">{{m.win_by_runs}} runs</span>
+                <span ng-if="m.win_by_wickets!=0">{{m.win_by_wickets}} wickets</span>
+                <br>
+                <small> On {{m.date}} at {{m.venue}} , {{m.city}}</small>
+            </div>
+
+        </div>
+    </div>
+    <!--row-->
+</div>

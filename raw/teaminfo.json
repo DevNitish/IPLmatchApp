@@ -1,0 +1,77 @@
+[{
+        "tid": "1",
+        "name": "Sunrisers Hyderabad",
+        "imageurl": "includes/images/shimg.png"
+    },
+
+    {
+        "tid": "2",
+        "name": "Mumbai Indians",
+        "imageurl": "includes/images/miimg.png"
+
+    },
+
+    {
+        "tid": "3",
+        "name": "Chennai Super Kings",
+        "imageurl": "includes/images/cskimg.png"
+
+    },
+    {
+        "tid": "4",
+        "name": "Delhi Daredevils",
+        "imageurl": "includes/images/ddimg.png"
+
+    },
+    {
+        "tid": "5",
+        "name": "Royal Challengers Bangalore",
+        "imageurl": "includes/images/rcbimg.jpg"
+
+    },
+    {
+        "tid": "6",
+        "name": "Kings XI Punjab",
+        "imageurl": "includes/images/kepimg.jpg"
+
+
+    }, {
+        "tid": "7",
+        "name": "Kolkata Knight Riders",
+        "imageurl": "includes/images/kkrimg.png"
+
+    }, {
+        "tid": "8",
+        "name": "Rajasthan Royals",
+        "imageurl": "includes/images/rrimg.png"
+
+    }, {
+        "tid": "9",
+        "name": "Gujarat Lions",
+        "imageurl": "includes/images/glimg.png"
+
+    }, {
+        "tid": "10",
+        "name": "Rising Pune Supergiants",
+        "imageurl": "includes/images/rpsimg.png"
+
+    }, {
+        "tid": "11",
+        "name": "Sunrisers Hyderabad",
+        "imageurl": "includes/images/shimg.png"
+
+    }, 
+    {
+        "tid": "12",
+        "name": "Deccan Chargers",
+        "imageurl": "includes/images/dcimg.png"
+
+    },
+
+    {
+        "tid": "13",
+        "name": "Kochi Tuskers Kerala",
+        "imageurl": "includes/images/ktkimg.png"
+
+    }
+]

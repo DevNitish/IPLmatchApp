@@ -1,0 +1,46 @@
+/*custom css code here*/
+.myipl-nav {
+    position: relative;
+    height: 48px;
+    background: #009270;
+}
+.myiplicon{
+    width: 25px;
+    height: 25px;
+}
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+
+footer {
+    color: white;
+}
+.unstyle a{
+
+    color: white;
+
+}
+html,body{
+    height: 100%
+}
